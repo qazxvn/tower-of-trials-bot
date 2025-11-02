@@ -10,7 +10,7 @@ using System.Collections.Concurrent;
 ConcurrentDictionary<long, GameSession> sessions = new();
 
 using var cts = new CancellationTokenSource();
-var bot = new TelegramBotClient("8477008462:AAFeYB44UgVKUMXavcZqMpdp-JEWBqsaREo", cancellationToken: cts.Token);
+var bot = new TelegramBotClient("Токен бота", cancellationToken: cts.Token);
 var me = await bot.GetMe();
 bot.OnError += OnError;
 bot.OnMessage += OnMessage;
